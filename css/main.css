@@ -3,13 +3,19 @@ img{
     padding-left: 5px;
     padding-right: 5px;
     padding-top: -5px;
-    margin: auto;
     width: 100%;
     height: auto;
     border-radius: 15px;
 }
 
+article{
+  cursor: pointer;
+}
 
+.work img{
+    display: block;
+    margin: auto;
+}
 
 #title {
     font-size: 48px;
@@ -45,6 +51,11 @@ img{
     margin-top: 7px;
 }
 
+.feature img{
+    max-height: 250px;
+    max-width: 250px;
+}
+
 
 /*  OTHER DOCUMENT  /
 #other{
@@ -72,6 +83,10 @@ img{
     margin-top: 7px;
 }
 
+.other img{
+    max-height: 200px;
+    max-width: 200px;
+}
 
 .blurb p{
     padding-left: 7px;

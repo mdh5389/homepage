@@ -17,26 +17,23 @@
     </style>
   </head>
   <body>
-  
-    <script>
-      function loadPDF(newURL) {
-        alert(newURL);
-        $('pdfdoc').attr('data', newURL);
-        $('pdfdoc').load(newURL);
-      }
-
-    </script>
     
-    <div class="container">
-      <div class="col-md-6">
-        <h1 id="title" style="text-align:center">Matthew Heilman's e-Portfolio</h1>
-        <blockquote style="border:none">Below are several examples of recent works which I have completed for ENGL 202C - Technical writing.</blockquote>
-        
+    <div class="container-fluid">
+      <div class="col-md-6" style="left:0">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 id="title" style="text-align:center">
+            Matthew Heilman's <br>
+            e-Portfolio</h1>
+          <blockquote style="border:none">
+            Below are several examples of recent works which I have completed for ENGL 202C - Technical writing.  Please click each article to read it.
+
+          </blockquote>
+        </div>
         
         <!-- Begin Feature Articles -->
         
         
-        <div class="col-md-7 feature" id="feature">
+        <div class="col-sm-7 feature" id="feature">
         <article id="moppy" class="work" onclick="loadPDF('doc/moppy.pdf')">
             <div class="row">
               <img src="http://leganerd.com/wp-content/uploads/LEGANERD_046697.jpg">
@@ -71,7 +68,7 @@
         <!-- BEGIN Other Articles -->
         
         
-        <div class="col-md-5 other" id="other">
+        <div class="col-sm-5 other" id="other">
         
           <article id="resource" class="work" onclick="loadPDF('doc/IoT.pdf')">
             <div class="row">
@@ -91,7 +88,7 @@
           
           <article id="documentation" class="work" onclick="loadPDF('doc/documentation.pdf')">
             <div class="row">
-              <img src="http://d1hxhfsggnhjjy.cloudfront.net/assets/logo/littlebits-logo-cb58ee505a3ab7afc9587d2a8ac087f9589a35e0303b70f2e464b99e69e2e489.svg">
+              <img src="http://d1hxhfsggnhjjy.cloudfront.net/assets/logo/littlebits-logo-cb58ee505a3ab7afc9587d2a8ac087f9589a35e0303b70f2e464b99e69e2e489.svg" style="border-radius:0px">
             </div>
             <div class="row blurb">
               <h1>LittleBit Beat Sampler</h1>
@@ -104,13 +101,22 @@
         </div> <!-- END Other Articles-->
       </div>
       
-      <div class="col-md-6 sidebar-nav-fixed pull-right affix" style="right:0px">
+      <div class="col-md-6 pull-right" style="right:0px; position:fixed;">
         <div class="row embed-responsive" id="display" style="padding-bottom:100vh">
           <object id="pdfdoc" data="doc/resume.pdf" type="application/pdf" height="100%">
+            Oops! Something went wrong with the document preview... Try this link: <a href="doc/resume.pdf">resume.pdf</a>
           </object>
         </div>
       </div>
     </div>
+      
+    <script>
+      function loadPDF(newURL) {
+        $( "object" ).replaceWith('<object id="pdfdoc" data="'+newURL+'" type="application/pdf" height="100%">');
+      }
+
+    </script>
+    
   </body>
 </html>
 
