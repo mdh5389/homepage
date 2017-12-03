@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matthew D. Heilman</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+    
+    </style>
+  </head>
+  <body>
+  
+    <script>
+      function loadPDF(newURL) {
+        alert(newURL);
+        $('pdfdoc').attr('data', newURL);
+        $('pdfdoc').load(newURL);
+      }
+
+    </script>
+    
+    <div class="container">
+      <div class="col-md-6">
+        <h1 id="title" style="text-align:center">Matthew Heilman's e-Portfolio</h1>
+        <blockquote style="border:none">Below are several examples of recent works which I have completed for ENGL 202C - Technical writing.</blockquote>
+        
+        
+        <!-- Begin Feature Articles -->
+        
+        
+        <div class="col-md-7 feature" id="feature">
+        <article id="moppy" class="work" onclick="loadPDF('doc/moppy.pdf')">
+            <div class="row">
+              <img src="http://leganerd.com/wp-content/uploads/LEGANERD_046697.jpg">
+            </div>
+            <div class="row blurb">
+              <h1>Group Project</h1>
+              <p>
+                asdlf ;kaf l;kajf ;lasdj f;adlfkj ad;flj ajf dlaskjdf; laskj;asldkfjsdfl;k ads;lk jag;l agkjhsdgiouhtqlk lfk jalksfd lasfjlk lkhadslkgj hqlk hglk jasdflkja pqo j lasdfkj ;laksdj;lqkejf ;laskj ;aj;lakdj fq;lkwefj;lkasd fjaldk;ajdf ;adlkj as;fdlkj ;qj;lqkej lakf ja;lewkfj ;alfkja fl; kaef;lakjef; alkf.
+              </p>
+            </div>
+          </article> <!--END moppy-->        
+        
+        <br>
+        
+          <article id="resume" class="work" onclick="loadPDF('doc/resume.pdf')">
+            <div class="row">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7FpEnUl82MDBHscXZioRnQTiarZJojQrfbk-clmXkSjC6R4l2">
+            </div>
+            <div class="row blurb">
+              <h1>Resume</h1>
+              <p>
+                asdlf ;kaf l;kajf ;lasdj f;adlfkj ad;flj ajf dlaskjdf; laskj;asldkfjsdfl;k ads;lk jag;l agkjhsdgiouhtqlk lfk jalksfd lasfjlk lkhadslkgj hqlk hglk jasdflkja pqo j lasdfkj ;laksdj;lqkejf ;laskj ;aj;lakdj fq;lkwefj;lkasd fjaldk;ajdf ;adlkj as;fdlkj ;qj;lqkej lakf ja;lewkfj ;alfkja fl; kaef;lakjef; alkf.
+              </p>
+            </div>
+          </article> <!--END resume-->
+        
+        
+        
+          
+        </div> <!-- END Feature Articles -->
+        
+        <!-- BEGIN Other Articles -->
+        
+        
+        <div class="col-md-5 other" id="other">
+        
+          <article id="resource" class="work" onclick="loadPDF('doc/IoT.pdf')">
+            <div class="row">
+              <img src="https://openclipart.org/download/271912/1486151228.svg">
+            </div>
+            <div class="row">
+              <h1>IoT Resource Manual</h1>
+            </div>
+            <div class="row blurb">
+              <p>
+                In 2016, over 22 million houses in North America contained some degree of a “smart” home system.  This value is projected to grow by 55% by 2021.  This guide will help developers enter the IoT field so they can begin to make their house “smart”.  Not sure which device to use or just need general support, read this guide…
+              </p>
+            </div>
+          </article> <!--END resource-->  
+
+          <br>
+          
+          <article id="documentation" class="work" onclick="loadPDF('doc/documentation.pdf')">
+            <div class="row">
+              <img src="http://d1hxhfsggnhjjy.cloudfront.net/assets/logo/littlebits-logo-cb58ee505a3ab7afc9587d2a8ac087f9589a35e0303b70f2e464b99e69e2e489.svg">
+            </div>
+            <div class="row blurb">
+              <h1>LittleBit Beat Sampler</h1>
+              <p>
+                asdlf ;kaf l;kajf ;lasdj f;adlfkj ad;flj ajf dlaskjdf; laskj;asldkfjsdfl;k ads;lk jag;l agkjhsdgiouhtqlk lfk jalksfd lasfjlk lkhadslkgj hqlk hglk jasdflkja pqo j lasdfkj ;laksdj;lqkejf ;laskj ;aj;lakdj fq;lkwefj;lkasd fjaldk;ajdf ;adlkj as;fdlkj ;qj;lqkej lakf ja;lewkfj ;alfkja fl; kaef;lakjef; alkf.
+              </p>
+            </div>
+          </article> <!--END resume--> 
+        
+        </div> <!-- END Other Articles-->
+      </div>
+      
+      <div class="col-md-6 sidebar-nav-fixed pull-right affix" style="right:0px">
+        <div class="row embed-responsive" id="display" style="padding-bottom:100vh">
+          <object id="pdfdoc" data="doc/resume.pdf" type="application/pdf" height="100%">
+          </object>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
