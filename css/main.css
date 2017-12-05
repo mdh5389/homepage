@@ -20,14 +20,8 @@ article{
 #title {
     font-size: 48px;
 }
-/*  FEATURED DOCUMENT  /
-#feature{
-    height:475px;
-    overflow:hidden;
-    overflow-y: scroll;
-} 
 
-/**/
+/*  FEATURED DOCUMENT  */
 .feature article{
     padding: 20px;
     border-radius: 15px;
@@ -90,4 +84,26 @@ article{
 
 .blurb p{
     padding-left: 7px;
+}
+.blurb br{
+  padding-bottom: 5px;
+}
+
+
+.footer ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+}
+
+.footer li:before {
+    content: "-";
+    display: block;
+    float: left;
+    width: 1.2em;
+}
+
+.footer h1{
+  font-size: 36px;
 }
