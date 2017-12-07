@@ -25,7 +25,8 @@
           Matthew Heilman's <br> e-Portfolio
         </h1>
         <blockquote style="border:none">
-          Below are several examples of recent works which I have completed for ENGL 202C - Technical writing. Please click each article to view each resource.
+          Below are several examples of recent works which I have completed for ENGL 202C - Technical writing. Please click each article to view each resource.<br>
+		  <p style="font-size:10px"><strong>Note</strong>: If you are using Firefox 52 or newer, the PDF viewer on the right side of this page might be replaced by a download prompt. Please consider using a different browser or manage Firefox's setting to allow firefox to preview PDF documents as described <a href="https://support.mozilla.org/en-US/kb/view-pdf-files-firefox#w_using-another-pdf-viewer"> here</a> for the intended experience.</p>
         </blockquote>
       </div>
 
@@ -33,7 +34,7 @@
 
 
       <div class="col-sm-7 feature" id="feature">
-        <article id="moppy" class="work" onclick='loadPDF("https://www.youtube.com/embed/LdgzsF_O7oI")'>
+        <article id="moppy" class="work" onclick='loadMEDIA("https://www.youtube.com/embed/LdgzsF_O7oI")'>
           <div class="row">
             <img src="http://leganerd.com/wp-content/uploads/LEGANERD_046697.jpg">
           </div>
@@ -124,18 +125,23 @@
 
     <div class="col-md-6 pull-right" style="right:0px; position:fixed;">
       <div class="row embed-responsive" id="display" style="padding-bottom:100vh">
-        <iframe id="pdfdoc" src='doc/resume.pdf' height="100%">
-          Oops! Something went wrong with the document preview... Try this link: <a href="doc/resume.pdf">resume.pdf</a>
-        </iframe>
+        <object id="pdfdoc" data="doc/resume.pdf" type="application/pdf">
+          <embed src="doc/resume.pdf" type="application/pdf" />
+	    </object>
       </div>
     </div>
   </div>
 
   <script>
     function loadPDF(newURL) {
-      $("#pdfdoc").replaceWith('<iframe id="pdfdoc" src="' + newURL + '" height="100%" allow="encrypted-media" allowfullscreen>Oops! Something went wrong with the document preview... Try <a href="' + newURL + '">this</a> link.</iframe>');
+      $("#pdfdoc").replaceWith('<object id="pdfdoc" data="' + newURL + '" type="application/pdf"><embed src="' + newURL + '" type="application/pdf" /></object>');
       $('#pdfdoc').attr('src', $('#pdfdoc').attr('src'));
     }
+	
+	function loadMEDIA(newURL){
+      $("#pdfdoc").replaceWith('<iframe id="pdfdoc" src="' + newURL + '" height="100%" allow="encrypted-media" allowfullscreen>Oops! Something went wrong with the document preview... Try <a href="' + newURL + '">this</a> link.</iframe>');
+      $('#pdfdoc').attr('src', $('#pdfdoc').attr('src'));
+	}
   </script>
 
   <footer class='col-md-6'>
